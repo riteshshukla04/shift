@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+   <head>
+      <title>Shift ROTA</title>
+      <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+      <link rel="stylesheet" type="text/css" href="/static/admin/css/login.css">
+      <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+      <meta name="robots" content="NONE,NOARCHIVE">
+      <style>
+         .footer {
+           position: fixed;
+           left: 0;
+           bottom: 0;
+           width: 100%;
+           background-color: red;
+           color: white;
+           text-align: center;
+         }
+         </style>
+
+   </head>
+   <body class=" login"
+      data-admin-utc-offset="19800">
+      <!-- Container -->
+      <div id="container">
+         <!-- Header -->
+         <div id="header" >
+            <div >
+            <div id="branding">
+               <h1 id="site-name" "><a href="">ROTA</a></h1>
+            </div>
+            </div>
+         </div>
+         <!-- END Header -->
+         <!-- Content -->
+         <div id="content" class="colM">
+            <div id="content-main">
+               <pclass="errornote">
+                  {% for message in messages %}
+                  <B>{{ message }}</B>
+                  {% endfor %}
+              </p>
+               <form action="" method="post" id="login-form" enctype="multipart/form-data">
+                   {% csrf_token %}
+                   <label class="required" for="id_password"><B>Date: &nbsp &nbsp </B> </label><input type="date" name="query" id="query" value="{{ Hello }}">
+
+                   <label class="required" for="id_password"><B>Group: &nbsp &nbsp </B> </label>
+
+                  <select name="group" id="group">
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  </select>
+                  <br>
+                  <input type="radio" name="A" id="A">
+                  <label for="A">Executive</label><br>
+                  <input type="radio" name="A" id="A">
+                  <label for="B">Non Executive</label><br>
+                  <label class="required" for="id_password"><B>Type: &nbsp &nbsp </B> </label>
+
+                  <select name="type" id="type">
+                  <option value="None">Non Executive</option>
+                  <option value="Executive">Executive</option>
+                  </select>
+                  <br>
+                  <input type="submit" name="submit">
+
+               </form>
+            </div>
+            <h1><B>{{ s }}</B></h1>
+
+            <br class="clear">
+         </div>
+         <!-- END Content -->
+
+         <div id="footer">
+
+
+         </div>
+      </div>
+      <div class="footer">
+         Developed By RITESH KUMAR SHUKLA
+      </div>
+
+
+   </body>
+</html>
